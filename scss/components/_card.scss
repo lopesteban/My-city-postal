@@ -1,0 +1,92 @@
+@forward '../base/reset';
+@forward '../utils/classes';
+@forward '../utils/animations';
+
+@use '../utils/variables' as v;
+
+.card-component {
+  background-color: v.$bg-color-card;
+  width: 50%;
+  height: 90%;
+  -webkit-box-shadow: 10px 10px 15px hsl(0, 65%, 13%);
+  box-shadow: 10px 10px 30px hsl(0, 0%, 50%);
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  -webkit-animation: showUp 1s ease-in forwards;
+  animation: showUp 1s ease-in forwards;
+}
+
+div.img-container {
+  width: 100%;
+  height: 70%;
+}
+
+div.info-container {
+  width: 80%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  row-gap: 3%;
+
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: v.$font-style;
+    font-weight: 700;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: v.$font-style;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+
+  a:link,
+  a:visited {
+    color: black;
+  }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 800px) {
+  .card-component {
+    width: 70%;
+    height: 80%;
+  }
+  div.info-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  div.info-container {
+    h2 {
+      font-size: 2.3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
