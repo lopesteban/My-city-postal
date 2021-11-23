@@ -1,0 +1,6 @@
+@use "../Abstracts/variables--colors" as c;
+.body {
+  padding: 1%;
+  display: grid;
+  background-color: c.$body--background--color;
+}

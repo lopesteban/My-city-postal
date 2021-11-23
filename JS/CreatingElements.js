@@ -20,7 +20,7 @@ $documentBody.appendChild($scriptsFragment);
 //Creating link tag to head
 const $linkToCSS = document.createElement("link");
 $linkToCSS.rel = "stylesheet";
-$linkToCSS.href = "dist/main.css";
+$linkToCSS.href = "../dist/main.css";
 
 //-----------------------------------------------------------------------
-//Creating divs
+//BODY

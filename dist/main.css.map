@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../SCSS/Base/_reset.scss","../SCSS/Layout/_body.scss","../SCSS/Abstracts/_variables--colors.scss"],"names":[],"mappings":"AAAA;EACE;;;AAGF;AAAA;AAAA;EAGE;EACA;EACA;;;AAGF;EACE;;;ACZF;EACE;EACA;EACA,kBCHwB","file":"main.css"}
