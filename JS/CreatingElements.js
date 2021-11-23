@@ -21,3 +21,6 @@ $documentBody.appendChild($scriptsFragment);
 const $linkToCSS = document.createElement("link");
 $linkToCSS.rel = "stylesheet";
 $linkToCSS.href = "dist/main.css";
+
+//-----------------------------------------------------------------------
+//Creating divs
