@@ -42,6 +42,7 @@ const imgReferences = [
     title: "London",
   },
 ];
+
 //--------------------------------------------------------------
 //CREATING CARDS WITH IMAGES
 for (let i = 0; i < 3; i++) {
@@ -62,3 +63,17 @@ for (let i = 0; i < 3; i++) {
   $div.appendChild($infoContainer);
   $divsFragment.appendChild($div);
 }
+//-------------------------------------------------------------------------
+//OJO!!
+/*Recuerda que al insertar los divs en un nodo fragmento, los divs NO son hijos del body, sino del nodo Fragmennto*/
+console.log($divsFragment.children);
+
+//First Card
+const $firstImg = $divsFragment.children[0].children[1];
+$firstImg.innerHTML = `<h2> New York </h2>`;
+//Second Card
+const $secondImg = $divsFragment.children[1].children[1];
+$secondImg.innerHTML = `<h2> Paris </h2>`;
+//Third Card
+const $thirdImg = $divsFragment.children[2].children[1];
+$thirdImg.innerHTML = `<h2> London </h2>`;
