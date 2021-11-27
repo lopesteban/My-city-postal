@@ -6,7 +6,12 @@ const $documentBody = document.body;
 //----------------------------------------------------------
 
 //Creating scripts for html srtucture
-const scriptsSrcArray = ["../JS/AddingElements.js", "../JS/CSS-classes.js"];
+const scriptsSrcArray = [
+  "../JS/AddingElements.js",
+  "../JS/CSS-classes.js",
+  "../JS/Events.js",
+  "../JS/Functions.js",
+];
 const $scriptsFragment = document.createDocumentFragment();
 //Adding scripts to fragment
 for (let i = 0; i < scriptsSrcArray.length; i++) {
@@ -56,6 +61,7 @@ for (let i = 0; i < 3; i++) {
   const $image = document.createElement("img");
   $image.src = imgReferences[i].img;
   $image.alt = imgReferences[i].title;
+  $image.id = `image-number-${i + 1}`;
   $imgContainer.appendChild($image);
   //Creating info containers
   const $infoContainer = document.createElement("div");
@@ -69,11 +75,19 @@ for (let i = 0; i < 3; i++) {
 console.log($divsFragment.children);
 
 //First Card
-const $firstImg = $divsFragment.children[0].children[1];
-$firstImg.innerHTML = `<h2> New York </h2>`;
+const $firstContent = $divsFragment.children[0].children[1];
+$firstContent.innerHTML = `<h2> New York </h2>`;
+//First Image
+const $firstImg = document.getElementById("image-number-1");
+
 //Second Card
-const $secondImg = $divsFragment.children[1].children[1];
-$secondImg.innerHTML = `<h2> Paris </h2>`;
+const $secondContent = $divsFragment.children[1].children[1];
+$secondContent.innerHTML = `<h2> Paris </h2>`;
+//Second image
+const $secondImg = document.getElementById("image-number-2");
+
 //Third Card
-const $thirdImg = $divsFragment.children[2].children[1];
-$thirdImg.innerHTML = `<h2> London </h2>`;
+const $thirdContent = $divsFragment.children[2].children[1];
+$thirdContent.innerHTML = `<h2> London </h2>`;
+//Third image
+const $thirdImg = document.getElementById("image-number-3");
