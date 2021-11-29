@@ -2,7 +2,7 @@
 const $documentHead = document.head;
 //BODY
 const $documentBody = document.body;
-
+$documentBody.id = "body";
 //----------------------------------------------------------
 
 //Creating scripts for html srtucture
@@ -59,9 +59,9 @@ for (let i = 0; i < 3; i++) {
   $div.appendChild($imgContainer);
   //Appending images to imgContainer
   const $image = document.createElement("img");
+  $image.id = `image-number-${i + 1}`;
   $image.src = imgReferences[i].img;
   $image.alt = imgReferences[i].title;
-  $image.id = `image-number-${i + 1}`;
   $imgContainer.appendChild($image);
   //Creating info containers
   const $infoContainer = document.createElement("div");
@@ -71,23 +71,29 @@ for (let i = 0; i < 3; i++) {
 }
 //-------------------------------------------------------------------------
 //OJO!!
-/*Recuerda que al insertar los divs en un nodo fragmento, los divs NO son hijos del body, sino del nodo Fragmennto*/
-console.log($divsFragment.children);
+/*Recuerda que al insertar los divs en un nodo fragmento, los divs NO son hijos del body, sino del nodo Fragmento*/
+/*RECUERDA QUE AL USAR LA INSERCION DE UN FRAGMENTO, no se puede aplicar la propiedad  'getElementById()' o los 'querySelector' sobre el 'document', sino sobre el fragmento en cuestion. */
 
-//First Card
+//First Card---------------------------------------------------------------------------------------------------------------
+const $firstCard = $divsFragment.children[0];
+//First Card-Image
+const $firstImage = $firstCard.querySelector("img");
+//First Card-Text
 const $firstContent = $divsFragment.children[0].children[1];
 $firstContent.innerHTML = `<h2> New York </h2>`;
-//First Image
-const $firstImg = document.getElementById("image-number-1");
 
-//Second Card
+//Second Card----------------------------------------------------------------------------------------------------------------
+const $secondCard = $divsFragment.children[1];
+//Second Card-Image
+const $secondImage = $secondCard.querySelector("img");
+//Second Card-Text
 const $secondContent = $divsFragment.children[1].children[1];
 $secondContent.innerHTML = `<h2> Paris </h2>`;
-//Second image
-const $secondImg = document.getElementById("image-number-2");
 
-//Third Card
+//Third Card------------------------------------------------------------------------------------------------------------------
+const $thirdCard = $divsFragment.children[2];
+//Third Card-Image
+const $thirdImage = $thirdCard.querySelector("img");
+//Third Card-Text
 const $thirdContent = $divsFragment.children[2].children[1];
 $thirdContent.innerHTML = `<h2> London </h2>`;
-//Third image
-const $thirdImg = document.getElementById("image-number-3");

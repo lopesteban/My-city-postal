@@ -1,5 +1,11 @@
-.hovering-card-components {
-  transform: scale(1.15);
-  filter: blur(2px);
-  transition: all 0.2s ease-in;
+.hovering-cards {
+  transform: scale(1.1);
+  transition: 300ms ease-in;
+  z-index: 1;
+}
+
+.gray-filter {
+  filter: blur(1px);
+  filter: grayscale(100%);
+  transition: 300ms ease-in;
 }
