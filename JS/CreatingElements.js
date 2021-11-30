@@ -10,7 +10,6 @@ const scriptsSrcArray = [
   "../JS/AddingElements.js",
   "../JS/CSS-classes.js",
   "../JS/Events.js",
-  "../JS/Functions.js",
 ];
 const $scriptsFragment = document.createDocumentFragment();
 //Adding scripts to fragment
@@ -31,6 +30,7 @@ $linkToCSS.href = "../dist/main.css";
 //BODY
 //Creating Divs
 const $divsFragment = document.createDocumentFragment();
+$documentBody.appendChild($divsFragment);
 
 //Assigning images to every card
 const imgReferences = [
@@ -72,7 +72,7 @@ for (let i = 0; i < 3; i++) {
 //-------------------------------------------------------------------------
 //OJO!!
 /*Recuerda que al insertar los divs en un nodo fragmento, los divs NO son hijos del body, sino del nodo Fragmento*/
-/*RECUERDA QUE AL USAR LA INSERCION DE UN FRAGMENTO, no se puede aplicar la propiedad  'getElementById()' o los 'querySelector' sobre el 'document', sino sobre el fragmento en cuestion. */
+/*RECUERDA QUE AL USAR LA INSERCION DE UN FRAGMENTO,SI NO INSERTAS el fragmento al body; NO se puede aplicar las propiedades  'getElementById()', 'querySelector' o 'querySelectorAll' sobre el 'document', sino sobre el fragmento en cuestion. */
 
 //First Card---------------------------------------------------------------------------------------------------------------
 const $firstCard = $divsFragment.children[0];

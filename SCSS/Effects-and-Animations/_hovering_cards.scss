@@ -1,11 +1,26 @@
+@use "../Abstracts/variables--colors" as c;
 .hovering-cards {
   transform: scale(1.1);
-  transition: 300ms ease-in;
+  transition: 400ms ease-in;
   z-index: 1;
 }
 
 .gray-filter {
   filter: blur(1px);
   filter: grayscale(100%);
-  transition: 300ms ease-in;
+  transition: 400ms ease-in;
+}
+
+//Night mode.
+
+.night-mode {
+  background-color: c.$night-mode--background--color;
+  transition: 400ms ease;
+}
+
+.night-mode-info {
+  background-color: rgb(67, 68, 69);
+  color: c.$info-container--bg--color;
+  border: 1px solid c.$info-container--bg--color;
+  transition: 400ms ease;
 }

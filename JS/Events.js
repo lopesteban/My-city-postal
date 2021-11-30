@@ -10,7 +10,20 @@ const clicking = () => {
   alert("You clicked");
 };
 
-//Hovering 1st card
+//c)Night mode
+const nightMode = () => {
+  $documentBody.classList.toggle("night-mode");
+  $documentBody.querySelectorAll(".info-container").forEach((div) => {
+    div.classList.toggle("night-mode-info");
+  });
+};
+
+//EVENTS
+
+//Night mode on body
+$documentBody.addEventListener("click", () => nightMode());
+
+//Event - Hovering 1st card
 $firstCard.addEventListener("mouseover", () =>
   hovering($firstCard, $firstImage)
 );
@@ -18,7 +31,7 @@ $firstCard.addEventListener("mouseout", () =>
   hovering($firstCard, $firstImage)
 );
 
-//Hovering 2nd card
+//Event - Hovering 2nd card
 $secondCard.addEventListener("mouseover", () =>
   hovering($secondCard, $secondImage)
 );
@@ -27,9 +40,9 @@ $secondCard.addEventListener("mouseout", () =>
 );
 
 //Clicking on 2nd img
-$secondCard.addEventListener("click", clicking, { once: true });
+//$secondCard.addEventListener("click", clicking, { once: true });
 
-//Hovering 3rd card
+//Event - Hovering 3rd card
 $thirdCard.addEventListener("mouseover", () =>
   hovering($thirdCard, $thirdImage)
 );
