@@ -30,7 +30,7 @@ $linkToCSS.href = "../dist/main.css";
 //BODY
 //Creating Divs
 const $divsFragment = document.createDocumentFragment();
-$documentBody.appendChild($divsFragment);
+$documentBody.appendChild($divsFragment); //Indispensable
 
 //Assigning images to every card
 const imgReferences = [
@@ -50,7 +50,7 @@ const imgReferences = [
 
 //--------------------------------------------------------------
 //CREATING CARDS WITH IMAGES
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < imgReferences.length; i++) {
   const $div = document.createElement("div");
   $div.classList.add("item", "card-component");
   //Creating images containers (figure)
