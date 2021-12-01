@@ -30,7 +30,6 @@ $linkToCSS.href = "../dist/main.css";
 //BODY
 //Creating Divs
 const $divsFragment = document.createDocumentFragment();
-$documentBody.appendChild($divsFragment); //Indispensable
 
 //Assigning images to every card
 const imgReferences = [
@@ -52,7 +51,7 @@ const imgReferences = [
 //CREATING CARDS WITH IMAGES
 for (let i = 0; i < imgReferences.length; i++) {
   const $div = document.createElement("div");
-  $div.classList.add("item", "card-component");
+  $div.classList.add("card-component", "item");
   //Creating images containers (figure)
   const $imgContainer = document.createElement("figure");
   $imgContainer.classList.add("img-container");
@@ -65,10 +64,11 @@ for (let i = 0; i < imgReferences.length; i++) {
   $imgContainer.appendChild($image);
   //Creating info containers
   const $infoContainer = document.createElement("div");
-  $infoContainer.classList.add("item", "info-container");
+  $infoContainer.classList.add("info-container");
   $div.appendChild($infoContainer);
   $divsFragment.appendChild($div);
 }
+
 //-------------------------------------------------------------------------
 //OJO!!
 /*Recuerda que al insertar los divs en un nodo fragmento, los divs NO son hijos del body, sino del nodo Fragmento*/

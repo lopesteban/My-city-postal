@@ -5,7 +5,7 @@ const hovering = (card, img) => {
   img.classList.toggle("gray-filter");
 };
 
-//EVENTS
+//EVENTS--------------------------------------------------------------------------------------------
 
 //Night mode on body
 document.addEventListener("click", (e) => {
@@ -17,31 +17,28 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// //Event - Hovering 1st card
-$firstCard.addEventListener("mouseover", () =>
-  hovering($firstCard, $firstImage)
-);
-$firstCard.addEventListener("mouseout", () =>
-  hovering($firstCard, $firstImage)
-);
+//Hovering On
+$documentBody.addEventListener("mouseover", (e) => {
+  if (e.target === $firstImage || e.target === $firstContent) {
+    hovering($firstCard, $firstImage);
+  }
+  if (e.target === $secondImage || e.target === $secondContent) {
+    hovering($secondCard, $secondImage);
+  }
+  if (e.target === $thirdImage || e.target === $thirdContent) {
+    hovering($thirdCard, $thirdImage);
+  }
+});
 
-// //Event - Hovering 2nd card
-$secondCard.addEventListener("mouseover", () =>
-  hovering($secondCard, $secondImage)
-);
-$secondCard.addEventListener("mouseout", () =>
-  hovering($secondCard, $secondImage)
-);
-
-// //Clicking on 2nd img
-//$secondCard.addEventListener("click", clicking, { once: true });
-
-// //Event - Hovering 3rd card
-$thirdCard.addEventListener("mouseover", () =>
-  hovering($thirdCard, $thirdImage)
-);
-$thirdCard.addEventListener("mouseout", () =>
-  hovering($thirdCard, $thirdImage)
-);
-
-console.log($divsFragment.children);
+//Hovering Out
+$documentBody.addEventListener("mouseout", (e) => {
+  if (e.target === $firstImage || e.target === $firstContent) {
+    hovering($firstCard, $firstImage);
+  }
+  if (e.target === $secondImage || e.target === $secondContent) {
+    hovering($secondCard, $secondImage);
+  }
+  if (e.target === $thirdImage || e.target === $thirdContent) {
+    hovering($thirdCard, $thirdImage);
+  }
+});
