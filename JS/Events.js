@@ -15,6 +15,15 @@ document.addEventListener("click", (e) => {
       div.classList.toggle("night-mode-info");
     });
   }
+  if (e.target === $firstImage || e.target === $firstContent) {
+    open("https://en.wikipedia.org/wiki/New_York_City");
+  }
+  if (e.target === $secondImage || e.target === $secondContent) {
+    open("https://en.wikipedia.org/wiki/Paris");
+  }
+  if (e.target === $thirdImage || e.target === $thirdContent) {
+    open("https://en.wikipedia.org/wiki/London");
+  }
 });
 
 //Hovering On
