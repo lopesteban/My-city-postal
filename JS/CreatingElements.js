@@ -1,3 +1,5 @@
+//DOCUMENTO HTML
+const $document = document.documentElement;
 //HEAD
 const $documentHead = document.head;
 //BODY
@@ -10,6 +12,7 @@ const scriptsSrcArray = [
   "../JS/AddingElements.js",
   "../JS/CSS-classes.js",
   "../JS/Events.js",
+  "../JS/BOM.js",
 ];
 const $scriptsFragment = document.createDocumentFragment();
 //Adding scripts to fragment
